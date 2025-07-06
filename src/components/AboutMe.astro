@@ -1,0 +1,56 @@
+---
+// AboutMe.astro: Sección sobre mí para el portafolio
+---
+
+<style>
+.fadein-section {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.5s cubic-bezier(.4,0,.2,1), transform 0.5s cubic-bezier(.4,0,.2,1);
+}
+.fadein-section.visible {
+  opacity: 1;
+  transform: none;
+}
+</style>
+
+<script is:inline>
+if (typeof window !== 'undefined') {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.15 });
+  document.querySelectorAll('.fadein-section').forEach(el => observer.observe(el));
+}
+</script>
+
+<section class="about-section py-20 bg-white dark:bg-slate-900 relative overflow-hidden fadein-section">
+  <div class="absolute top-0 left-0 w-40 h-40 bg-blue-100 dark:bg-blue-950 rounded-full opacity-40 blur-2xl -z-10 animate-pulse" style="filter: blur(60px);"></div>
+  <div class="absolute bottom-0 right-0 w-56 h-56 bg-blue-200 dark:bg-blue-900 rounded-full opacity-30 blur-2xl -z-10 animate-pulse" style="filter: blur(80px);"></div>
+  <div class="max-w-4xl mx-auto px-4 text-center relative z-10">
+    <h2 class="text-3xl md:text-4xl font-bold text-blue-700 dark:text-blue-400 mb-4">Sobre mí</h2>
+    <p class="text-lg text-slate-700 dark:text-slate-200 mb-4 leading-relaxed">
+      ¡Hola! Soy <span class="font-semibold text-blue-700 dark:text-blue-400">Reny</span>, desarrollador fullstack apasionado por la tecnología y la creación de soluciones modernas. Me especializo en <span class="font-semibold text-blue-700 dark:text-blue-400">Next.js</span>, <span class="font-semibold text-blue-700 dark:text-blue-400">React</span>, <span class="font-semibold text-blue-700 dark:text-blue-400">JavaScript</span>, <span class="font-semibold text-blue-700 dark:text-blue-400">TypeScript</span>, <span class="font-semibold text-blue-700 dark:text-blue-400">Java</span> y <span class="font-semibold text-blue-700 dark:text-blue-400">Spring Boot</span>.
+    </p>
+    <p class="text-base text-slate-500 dark:text-slate-300 mb-6">
+      Me motiva aprender constantemente, colaborar en equipos multidisciplinarios y enfrentar nuevos retos. Disfruto construir productos que impactan positivamente a las personas y siempre busco mejorar mis habilidades y compartir conocimiento.
+    </p>
+    <div class="flex flex-wrap justify-center gap-4 mt-6">
+      <span class="inline-flex items-center gap-2 bg-blue-50 dark:bg-blue-950 text-blue-700 dark:text-blue-300 px-4 py-2 rounded-full text-sm font-medium shadow-sm align-middle">
+        Aprendizaje continuo
+      </span>
+      <span class="inline-flex items-center gap-2 bg-blue-50 dark:bg-blue-950 text-blue-700 dark:text-blue-300 px-4 py-2 rounded-full text-sm font-medium shadow-sm align-middle">
+        Trabajo en equipo
+      </span>
+      <span class="inline-flex items-center gap-2 bg-blue-50 dark:bg-blue-950 text-blue-700 dark:text-blue-300 px-4 py-2 rounded-full text-sm font-medium shadow-sm align-middle">
+        Resolución de problemas
+      </span>
+      <span class="inline-flex items-center gap-2 bg-blue-50 dark:bg-blue-950 text-blue-700 dark:text-blue-300 px-4 py-2 rounded-full text-sm font-medium shadow-sm align-middle">
+        Pasión por la tecnología
+      </span>
+    </div>
+  </div>
+</section>

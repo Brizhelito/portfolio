@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+  Utilidad global para fade-in en todas las secciones
+*/
+.fadein-section {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.5s cubic-bezier(.4,0,.2,1), transform 0.5s cubic-bezier(.4,0,.2,1);
+}
+.fadein-section.visible {
+  opacity: 1;
+  transform: none;
+}

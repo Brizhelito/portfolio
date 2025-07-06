@@ -1,0 +1,56 @@
+---
+// ProjectsShowcase.astro: Sección de proyectos destacados para el portafolio
+---
+
+<style>
+.fadein-section {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.5s cubic-bezier(.4,0,.2,1), transform 0.5s cubic-bezier(.4,0,.2,1);
+}
+.fadein-section.visible {
+  opacity: 1;
+  transform: none;
+}
+</style>
+
+<section class="projects-section py-16 bg-slate-50 dark:bg-slate-900 fadein-section">
+  <div class="max-w-6xl mx-auto px-4">
+    <h2 class="text-3xl md:text-4xl font-bold text-blue-700 dark:text-blue-400 mb-10 text-center">Proyectos Destacados</h2>
+    <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+      <!-- Proyecto ejemplo 1 -->
+      <div class="rounded-xl shadow-lg bg-white dark:bg-slate-800 p-6 flex flex-col items-start hover:scale-[1.03] transition-transform">
+        <div class="w-full h-40 bg-slate-200 dark:bg-slate-700 rounded-lg mb-4 flex items-center justify-center text-slate-400 dark:text-slate-500 text-2xl">Imagen</div>
+        <h3 class="text-xl font-semibold mb-2 text-slate-900 dark:text-slate-100">Nombre del Proyecto</h3>
+        <p class="text-slate-600 dark:text-slate-300 mb-3">Breve descripción del proyecto, tecnologías usadas y objetivo principal.</p>
+        <div class="flex flex-wrap gap-2 mb-3">
+          <span class="bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-blue-300 px-2 py-0.5 rounded text-xs font-medium">React</span>
+          <span class="bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-blue-300 px-2 py-0.5 rounded text-xs font-medium">Next.js</span>
+        </div>
+        <div class="flex gap-3 mt-auto">
+          <a href="#" class="text-blue-600 dark:text-blue-400 hover:underline text-sm font-medium">Demo</a>
+          <a href="#" class="text-slate-500 dark:text-slate-300 hover:underline text-sm font-medium">Repositorio</a>
+        </div>
+      </div>
+      <!-- Puedes duplicar este bloque para más proyectos -->
+      <div class="rounded-xl shadow-lg bg-white dark:bg-slate-800 p-6 flex flex-col items-start opacity-60 pointer-events-none">
+        <div class="w-full h-40 bg-slate-200 dark:bg-slate-700 rounded-lg mb-4 flex items-center justify-center text-slate-400 dark:text-slate-500 text-2xl">Próximamente</div>
+        <h3 class="text-xl font-semibold mb-2 text-slate-900 dark:text-slate-100">Proyecto futuro</h3>
+        <p class="text-slate-600 dark:text-slate-300 mb-3">Aquí aparecerán más proyectos a medida que los agregues.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script is:inline>
+if (typeof window !== 'undefined') {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.15 });
+  document.querySelectorAll('.fadein-section').forEach(el => observer.observe(el));
+}
+</script>
