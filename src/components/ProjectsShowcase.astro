@@ -18,25 +18,67 @@
   <div class="max-w-6xl mx-auto px-4">
     <h2 class="text-3xl md:text-4xl font-bold text-blue-700 dark:text-blue-400 mb-10 text-center">Proyectos Destacados</h2>
     <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-      <!-- Proyecto ejemplo 1 -->
-      <div class="rounded-xl shadow-lg bg-white dark:bg-slate-800 p-6 flex flex-col items-start hover:scale-[1.03] transition-transform">
-        <div class="w-full h-40 bg-slate-200 dark:bg-slate-700 rounded-lg mb-4 flex items-center justify-center text-slate-400 dark:text-slate-500 text-2xl">Imagen</div>
-        <h3 class="text-xl font-semibold mb-2 text-slate-900 dark:text-slate-100">Nombre del Proyecto</h3>
-        <p class="text-slate-600 dark:text-slate-300 mb-3">Breve descripción del proyecto, tecnologías usadas y objetivo principal.</p>
-        <div class="flex flex-wrap gap-2 mb-3">
-          <span class="bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-blue-300 px-2 py-0.5 rounded text-xs font-medium">React</span>
+      <div class="w-full rounded-xl shadow-lg bg-white dark:bg-slate-800 p-6 flex flex-col items-start hover:scale-[1.03] transition-transform focus:outline-none focus:ring-2 focus:ring-blue-400" tabindex="0" style="position:relative;">
+        <img src="/projects/pos-nextjs.webp" alt="POS Next.js" class="w-full h-40 object-cover rounded-lg mb-4 border border-slate-200 dark:border-slate-700 relative z-20" />
+        <h3 class="text-xl font-semibold mb-2 text-slate-900 dark:text-slate-100 relative z-20 flex items-center gap-2">Sistema POS (Next.js)
+          <span class="inline-flex items-center gap-1 bg-gradient-to-r from-blue-100 via-blue-200 to-blue-100 dark:from-blue-950 dark:via-blue-900 dark:to-blue-950 text-blue-700 dark:text-blue-200 px-2 py-0.5 rounded-full text-xs font-bold shadow-sm border border-blue-200 dark:border-blue-800">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 00.95.69h4.175c.969 0 1.371 1.24.588 1.81l-3.38 2.455a1 1 0 00-.364 1.118l1.287 3.966c.3.922-.755 1.688-1.54 1.118l-3.38-2.454a1 1 0 00-1.175 0l-3.38 2.454c-.784.57-1.838-.196-1.54-1.118l1.287-3.966a1 1 0 00-.364-1.118L2.05 9.394c-.783-.57-.38-1.81.588-1.81h4.175a1 1 0 00.95-.69l1.286-3.967z"/></svg>
+            Destacado
+          </span>
+        </h3>
+        <p class="text-slate-600 dark:text-slate-300 mb-3 relative z-20 min-h-[48px]">POS moderno para ventas, inventario y clientes en comercios. Interfaz ágil, reportes y modo oscuro.</p>
+        <div class="flex flex-wrap gap-2 mb-3 relative z-20">
           <span class="bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-blue-300 px-2 py-0.5 rounded text-xs font-medium">Next.js</span>
+          <span class="bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-blue-300 px-2 py-0.5 rounded text-xs font-medium">TypeScript</span>
+          <span class="bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-blue-300 px-2 py-0.5 rounded text-xs font-medium">TailwindCSS</span>
+          <span class="bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-blue-300 px-2 py-0.5 rounded text-xs font-medium">Prisma</span>
+          <span class="bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-blue-300 px-2 py-0.5 rounded text-xs font-medium">PostgreSQL</span>
         </div>
-        <div class="flex gap-3 mt-auto">
-          <a href="#" class="text-blue-600 dark:text-blue-400 hover:underline text-sm font-medium">Demo</a>
-          <a href="#" class="text-slate-500 dark:text-slate-300 hover:underline text-sm font-medium">Repositorio</a>
+        <div class="flex gap-3 mt-auto relative z-20 flex-wrap">
+          <a href="https://nextjs-pos-xi.vercel.app" target="_blank" rel="noopener" class="inline-flex items-center gap-1 bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-blue-300 px-2 py-0.5 rounded text-xs font-semibold hover:underline focus:outline-none focus:ring-2 focus:ring-blue-400">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
+            Demo
+          </a>
+          <a href="https://github.com/brizhelito/pos-system" target="_blank" rel="noopener" class="inline-flex items-center gap-1 bg-slate-100 dark:bg-slate-700 text-blue-700 dark:text-blue-300 px-2 py-0.5 rounded text-xs font-semibold hover:underline focus:outline-none focus:ring-2 focus:ring-blue-400">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.484 2 12.021c0 4.428 2.865 8.184 6.839 9.504.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.342-3.369-1.342-.454-1.156-1.11-1.464-1.11-1.464-.908-.62.069-.608.069-.608 1.004.07 1.532 1.032 1.532 1.032.892 1.53 2.341 1.088 2.91.832.091-.647.35-1.088.636-1.339-2.221-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.987 1.029-2.686-.103-.254-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.025A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.295 2.748-1.025 2.748-1.025.546 1.378.202 2.396.1 2.65.64.699 1.028 1.593 1.028 2.686 0 3.847-2.337 4.695-4.566 4.944.359.309.678.919.678 1.852 0 1.336-.012 2.417-.012 2.747 0 .267.18.577.688.479C19.138 20.2 22 16.447 22 12.021 22 6.484 17.523 2 12 2z"/></svg>
+            Repositorio
+          </a>
+        </div>
+        <div class="mt-2 text-xs text-slate-600 dark:text-slate-300 relative z-20">
+          <span class="font-semibold">Demo Admin:</span> admin@gmail.com / <span class="font-mono">admin123</span><br />
+          <span class="font-semibold">Demo Cajero:</span> cajero@gmail.com / <span class="font-mono">cajero123</span>
         </div>
       </div>
-      <!-- Puedes duplicar este bloque para más proyectos -->
-      <div class="rounded-xl shadow-lg bg-white dark:bg-slate-800 p-6 flex flex-col items-start opacity-60 pointer-events-none">
-        <div class="w-full h-40 bg-slate-200 dark:bg-slate-700 rounded-lg mb-4 flex items-center justify-center text-slate-400 dark:text-slate-500 text-2xl">Próximamente</div>
-        <h3 class="text-xl font-semibold mb-2 text-slate-900 dark:text-slate-100">Proyecto futuro</h3>
-        <p class="text-slate-600 dark:text-slate-300 mb-3">Aquí aparecerán más proyectos a medida que los agregues.</p>
+      <!-- FinWise Project Card -->
+      <div class="w-full rounded-xl shadow-lg bg-white dark:bg-slate-800 p-6 flex flex-col items-start hover:scale-[1.03] transition-transform focus:outline-none focus:ring-2 focus:ring-green-400" tabindex="0" style="position:relative;">
+        <img src="/projects/finwise_dashboard.webp" alt="FinWise App" class="w-full h-40 object-cover rounded-lg mb-4 border border-slate-200 dark:border-slate-700 relative z-20" />
+        <h3 class="text-xl font-semibold mb-2 text-slate-900 dark:text-slate-100 relative z-20 flex items-center gap-2">FinWise     (Next.js)
+          <span class="inline-flex items-center gap-1 bg-gradient-to-r from-blue-100 via-blue-200 to-blue-100 dark:from-blue-950 dark:via-blue-900 dark:to-blue-950 text-blue-700 dark:text-blue-200 px-2 py-0.5 rounded-full text-xs font-bold shadow-sm border border-blue-200 dark:border-blue-800">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 00.95.69h4.175c.969 0 1.371 1.24.588 1.81l-3.38 2.455a1 1 0 00-.364 1.118l1.287 3.966c.3.922-.755 1.688-1.54 1.118l-3.38-2.454a1 1 0 00-1.175 0l-3.38 2.454c-.784.57-1.838-.196-1.54-1.118l1.287-3.966a1 1 0 00-.364-1.118L2.05 9.394c-.783-.57-.38-1.81.588-1.81h4.175a1 1 0 00.95-.69l1.286-3.967z"/></svg>
+            Destacado
+          </span>
+        </h3>
+        <p class="text-slate-600 dark:text-slate-300 mb-3 relative z-20 min-h-[48px]">App para gestionar finanzas personales, presupuestos y metas de ahorro. Interfaz moderna, métricas, seguridad y panel privado para usuarios.</p>
+        <div class="flex flex-wrap gap-2 mb-3 relative z-20">
+          <span class="bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-blue-300 px-2 py-0.5 rounded text-xs font-medium">Next.js</span>
+          <span class="bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-blue-300 px-2 py-0.5 rounded text-xs font-medium">TypeScript</span>
+          <span class="bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-blue-300 px-2 py-0.5 rounded text-xs font-medium">Prisma</span>
+          <span class="bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-blue-300 px-2 py-0.5 rounded text-xs font-medium">React</span>
+          <span class="bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-blue-300 px-2 py-0.5 rounded text-xs font-medium">PostgreSQL</span>
+        </div>
+        <div class="flex gap-3 mt-auto relative z-20 flex-wrap">
+          <a href="https://finwise-nexjs.vercel.app" target="_blank" rel="noopener" class="inline-flex items-center gap-1 bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-blue-300 px-2 py-0.5 rounded text-xs font-semibold hover:underline focus:outline-none focus:ring-2 focus:ring-blue-400">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
+            Demo
+          </a>
+          <a href="https://github.com/Brizhelito/finwise-nexjs" target="_blank" rel="noopener" class="inline-flex items-center gap-1 bg-slate-100 dark:bg-slate-700 text-blue-700 dark:text-blue-300 px-2 py-0.5 rounded text-xs font-semibold hover:underline focus:outline-none focus:ring-2 focus:ring-blue-400">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.484 2 12.021c0 4.428 2.865 8.184 6.839 9.504.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.342-3.369-1.342-.454-1.156-1.11-1.464-1.11-1.464-.908-.62.069-.608.069-.608 1.004.07 1.532 1.032 1.532 1.032.892 1.53 2.341 1.088 2.91.832.091-.647.35-1.088.636-1.339-2.221-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.987 1.029-2.686-.103-.254-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.025A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.295 2.748-1.025 2.748-1.025.546 1.378.202 2.396.1 2.65.64.699 1.028 1.593 1.028 2.686 0 3.847-2.337 4.695-4.566 4.944.359.309.678.919.678 1.852 0 1.336-.012 2.417-.012 2.747 0 .267.18.577.688.479C19.138 20.2 22 16.447 22 12.021 22 6.484 17.523 2 12 2z"/></svg>
+            Repositorio
+          </a>
+        </div>
+        <div class="mt-2 text-xs text-slate-600 dark:text-slate-300 relative z-20">
+          <span class="font-semibold">Demo:</span> demo / <span class="font-mono">Demo123!</span><br />
+        </div>
       </div>
     </div>
   </div>
