@@ -87,7 +87,7 @@
         "techs": ["Java", "Spring Boot", "Maven", "Vanilla JS"],
         "image": "/projects/matrixezz/determinant.png",
         "imageAlt": "Matrixezz",
-        "detailsUrl": "/proyectos/matrixezz",
+        "detailsUrl": "/es/projects/matrixezz",
         "repoUrl": "https://github.com/angellvsdev/Matrixezz",
         "labels": {
           "details": "Ver más",
