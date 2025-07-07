@@ -1,16 +1,27 @@
 ---
-// Footer.astro: Pie de página para el portafolio
+/**
+ * @component Footer
+ * @description Pie de página internacionalizado
+ * @prop {string} copyright - Texto de copyright (usa {year} para el año dinámico)
+ * @prop {{
+ *   email: string,
+ *   github: string,
+ *   linkedin: string
+ * }} links - Labels de los enlaces
+ */
+const { copyright, links } = Astro.props;
+const year = new Date().getFullYear();
 ---
 
 <footer class="footer-section bg-blue-700 dark:bg-slate-900 text-white dark:text-blue-200 py-6 mt-12">
   <div class="max-w-5xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-4">
     <div class="text-sm text-center md:text-left">
-      © {new Date().getFullYear()} Reny Mireles. Todos los derechos reservados.
+      {copyright.replace('{year}', year)}
     </div>
     <div class="flex gap-4 justify-center md:justify-end">
-      <a href="mailto:renymireles@outlook.com" class="hover:underline">Email</a>
-      <a href="https://github.com/Brizhelito" target="_blank" rel="noopener" class="hover:underline">GitHub</a>
-      <a href="https://www.linkedin.com/in/reny-david-mireles-bozo-523147240" target="_blank" rel="noopener" class="hover:underline">LinkedIn</a>
+      <a href="mailto:renymireles@outlook.com" class="hover:underline">{links.email}</a>
+      <a href="https://github.com/Brizhelito" target="_blank" rel="noopener" class="hover:underline">{links.github}</a>
+      <a href="https://www.linkedin.com/in/reny-david-mireles-bozo-523147240" target="_blank" rel="noopener" class="hover:underline">{links.linkedin}</a>
     </div>
   </div>
 </footer>

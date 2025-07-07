@@ -1,3 +1,6 @@
+---
+import LanguageSwitcher from '../components/LanguageSwitcher.astro';
+---
 <!doctype html>
 <html lang="en">
 	<head>
@@ -17,6 +20,7 @@
 			</button>
 		</div>
 		<slot />
+		<LanguageSwitcher />
 		<script is:inline>
 			// Persistencia y toggle de modo oscuro
 			if (typeof window !== 'undefined') {

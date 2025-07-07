@@ -1,0 +1,164 @@
+{
+  "nav": {
+    "experience": "Experiencia",
+    "projects": "Proyectos",
+    "education": "Educación",
+    "about": "Sobre mí",
+    "contact": "Contacto"
+  },
+  "title": "Portafolio de Reny",
+  "description": "Portafolio de Reny, desarrollador de software y entusiasta de la tecnología.",
+  "language": "English",
+  "aboutMe": {
+    "title": "Sobre mí",
+    "paragraph1": "Me apasiona analizar sistemas, cuestionar supuestos y entender a fondo cómo funcionan las cosas. Veo la tecnología como un campo infinito para experimentar, abstraer ideas y construir soluciones elegantes a problemas complejos.",
+    "paragraph2": "Disfruto aprender de forma autodidacta, explorar conceptos desde distintas perspectivas y compartir hallazgos con quienes valoran la lógica y la creatividad. Creo que la mejor innovación surge del pensamiento independiente y la colaboración intelectual.",
+    "tags": [
+      "Aprendizaje continuo",
+      "Trabajo en equipo",
+      "Resolución de problemas",
+      "Pasión por la tecnología"
+    ]
+  },
+  "skillsStack": {
+    "title": "Habilidades & Stack",
+    "technologies": [
+      { "name": "React", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg", "alt": "React" },
+      { "name": "Next.js", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg", "alt": "Next.js" },
+      { "name": "JavaScript", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg", "alt": "JavaScript" },
+      { "name": "TypeScript", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg", "alt": "TypeScript" },
+      { "name": "Java", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg", "alt": "Java" },
+      { "name": "Spring Boot", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg", "alt": "Spring Boot" }
+    ]
+  },
+  "heroSection": {
+    "title": "Hola, soy <span class=\"text-blue-600 dark:text-blue-400\">Reny Mireles</span>",
+    "subtitle": "Desarrollador Fullstack",
+    "description": [
+      "Mi enfoque es crear productos digitales que resuelvan problemas reales, combinando creatividad, lógica y una visión de largo plazo. Busco el equilibrio entre la experiencia de usuario, la calidad técnica y el impacto positivo en cada proyecto.",
+      "Apasionado por la innovación, la mejora continua y el aprendizaje colaborativo."
+    ],
+    "techs": ["Next.js", "React", "JavaScript", "TypeScript", "Java", "Spring Boot"]
+  },
+  "projectsShowcase": {
+    "title": "Proyectos Destacados",
+    "projects": [
+      {
+        "title": "Sistema POS (Next.js)",
+        "featured": true,
+        "description": "POS moderno para ventas, inventario y clientes en comercios. Interfaz ágil, reportes y modo oscuro.",
+        "techs": ["Next.js", "TypeScript", "TailwindCSS", "Prisma", "PostgreSQL"],
+        "image": "/projects/pos-nextjs.webp",
+        "imageAlt": "POS Next.js",
+        "demoUrl": "https://nextjs-pos-xi.vercel.app",
+        "repoUrl": "https://github.com/renymireles/nextjs-pos",
+        "labels": {
+          "demo": "Demo",
+          "repo": "Repositorio",
+          "featured": "Destacado"
+        },
+        "credentials": [
+          { "role": "Demo Admin", "user": "admin@gmail.com", "pass": "admin123" },
+          { "role": "Demo Cajero", "user": "cajero@gmail.com", "pass": "cajero123" }
+        ]
+      },
+      {
+        "title": "Gestor de Finanzas (FinWise)",
+        "featured": true,
+        "description": "App para gestionar finanzas personales, presupuestos y metas de ahorro. Interfaz moderna, métricas, seguridad y panel privado para usuarios.",
+        "techs": ["React", "TypeScript", "TailwindCSS", "Node.js", "PostgreSQL"],
+        "image": "/projects/finwise_dashboard.webp",
+        "imageAlt": "FinWise",
+        "demoUrl": "https://finwise-demo.vercel.app",
+        "repoUrl": "https://github.com/renymireles/finwise",
+        "labels": {
+          "demo": "Demo",
+          "repo": "Repositorio",
+          "featured": "Destacado"
+        },
+        "credentials": [
+          { "role": "Demo", "user": "demo", "pass": "Demo123!" }
+        ]
+      },
+      {
+        "title": "Matrixezz",
+        "featured": false,
+        "description": "Matrixezz resuelve operaciones y teoremas de matrices con explicaciones claras paso a paso. Backend robusto en Java/Spring Boot. Ideal para aprender matemáticas avanzadas.",
+        "techs": ["Java", "Spring Boot", "Maven", "Vanilla JS"],
+        "image": "/projects/matrixezz/determinant.png",
+        "imageAlt": "Matrixezz",
+        "detailsUrl": "/proyectos/matrixezz",
+        "repoUrl": "https://github.com/angellvsdev/Matrixezz",
+        "labels": {
+          "details": "Ver más",
+          "repo": "Repositorio"
+        }
+      }
+    ]
+  },
+  "experienceSection": {
+    "title": "Experiencia Profesional",
+    "items": [
+      {
+        "year": "2024",
+        "company": "Corpozulia",
+        "role": "Desarrollador Fullstack (Java, Spring Boot, MySQL, React, Tailwind CSS)",
+        "description": "Desarrollo de una plataforma web para la gestión de inventario y solicitudes en la sede de Corpozulia (Machiques). Participé activamente en backend y frontend, colaborando con Angel (@angellvsdev) para lograr una solución integral, robusta y eficiente.",
+        "techs": ["Java", "Spring Boot", "MySQL", "React", "Tailwind CSS"]
+      }
+    ]
+  },
+  "educationSection": {
+    "title": "Educación & Certificaciones",
+    "items": [
+      {
+        "date": "09/06/2023",
+        "title": "Java OO: Entendiendo la Orientación a Objetos",
+        "institution": "Alura Latam",
+        "skills": "Spring Boot · Programación orientada a objetos (POO)",
+        "credentialLabel": "Ver credencial",
+        "credentialUrl": "https://app.aluracursos.com/certificate/3badeb64-f746-49bb-8e5e-8e1db1e3e1f9"
+      },
+      {
+        "date": "10/06/2023",
+        "title": "Java Polimorfismo: Entendiendo herencia e interfaces",
+        "institution": "Alura Latam",
+        "skills": null,
+        "credentialLabel": "Ver credencial",
+        "credentialUrl": "https://app.aluracursos.com/certificate/renymirelesd/java-parte-3-entendiendo-herencia-interfaces"
+      },
+      {
+        "date": "19/05/2023",
+        "title": "Desarrollo Personal G5 - ONE",
+        "institution": "Alura Latam",
+        "skills": "Desarrollo personal",
+        "credentialLabel": "Ver credencial",
+        "credentialUrl": "https://app.aluracursos.com/degree/certificate/b9152a7c-2472-4fd0-ab68-6c7a9eccaad7"
+      }
+    ]
+  },
+  "contactSection": {
+    "title": "Contacto",
+    "subtitle": "¿Te gustaría trabajar conmigo, tienes una propuesta o solo quieres saludar? ¡Hablemos!",
+    "form": {
+      "namePlaceholder": "Nombre",
+      "emailPlaceholder": "Correo electrónico",
+      "messagePlaceholder": "Tu mensaje",
+      "button": "Enviar mensaje"
+    },
+    "links": {
+      "email": "renymireles@outlook.com",
+      "github": "GitHub",
+      "linkedin": "LinkedIn",
+      "whatsapp": "+58 414 965 8113"
+    }
+  },
+  "footer": {
+    "copyright": "© {year} Reny Mireles. Todos los derechos reservados.",
+    "links": {
+      "email": "Email",
+      "github": "GitHub",
+      "linkedin": "LinkedIn"
+    }
+  }
+}

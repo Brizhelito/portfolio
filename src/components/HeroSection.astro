@@ -1,5 +1,5 @@
 ---
-// HeroSection.astro: Sección principal de presentación para el portafolio
+const { title, subtitle, description, techs } = Astro.props;
 ---
 
 <section class="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-50 to-blue-100 dark:from-slate-900 dark:to-blue-950">
@@ -7,20 +7,18 @@
     <div class="flex flex-col md:flex-row items-center justify-between gap-10 md:gap-16">
       <div class="flex-1 text-left md:text-left">
         <h1 class="hero-title text-4xl md:text-5xl font-bold mb-2 opacity-0 translate-y-10 transition-all duration-700">
-          Hola, soy <span class="text-blue-600 dark:text-blue-400">Reny Mireles</span>
+          <span set:html={title} />
         </h1>
-        <p class="hero-subtitle text-lg text-slate-500 dark:text-slate-300 mb-4 opacity-0 translate-y-10 transition-all duration-700 delay-150">Desarrollador Fullstack</p>
-        <p class="hero-desc text-base text-slate-700 dark:text-slate-200 mb-6 opacity-0 translate-y-10 transition-all duration-700 delay-300">
-          Mi enfoque es crear productos digitales que resuelvan problemas reales, combinando creatividad, lógica y una visión de largo plazo. Busco el equilibrio entre la experiencia de usuario, la calidad técnica y el impacto positivo en cada proyecto.<br />
-          Apasionado por la innovación, la mejora continua y el aprendizaje colaborativo.
-        </p>
+        <p class="hero-subtitle text-lg text-slate-500 dark:text-slate-300 mb-4 opacity-0 translate-y-10 transition-all duration-700 delay-150">{subtitle}</p>
+        <div class="hero-desc text-base text-slate-700 dark:text-slate-200 mb-6 opacity-0 translate-y-10 transition-all duration-700 delay-300">
+          {description.map((desc: string) => (
+            <p class="mb-2">{desc}</p>
+          ))}
+        </div>
         <div class="hero-techs flex flex-wrap gap-3 opacity-0 translate-y-10 transition-all duration-700 delay-500">
-          <span class="bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-blue-300 px-3 py-1 rounded-full text-sm font-medium">Next.js</span>
-          <span class="bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-blue-300 px-3 py-1 rounded-full text-sm font-medium">React</span>
-          <span class="bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-blue-300 px-3 py-1 rounded-full text-sm font-medium">JavaScript</span>
-          <span class="bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-blue-300 px-3 py-1 rounded-full text-sm font-medium">TypeScript</span>
-          <span class="bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-blue-300 px-3 py-1 rounded-full text-sm font-medium">Java</span>
-          <span class="bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-blue-300 px-3 py-1 rounded-full text-sm font-medium">Spring Boot</span>
+          {techs.map((tech: string) => (
+            <span class="bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-blue-300 px-3 py-1 rounded-full text-sm font-medium">{tech}</span>
+          ))}
         </div>
       </div>
       <div class="flex-1 flex items-center justify-center min-w-[180px]">

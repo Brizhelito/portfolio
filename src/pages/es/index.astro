@@ -1,0 +1,57 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import HeroSection from '../../components/HeroSection.astro';
+import ProjectsShowcase from '../../components/ProjectsShowcase.astro';
+import AboutMe from '../../components/AboutMe.astro';
+import SkillsStack from '../../components/SkillsStack.astro';
+import Experience from '../../components/Experience.astro';
+import Education from '../../components/Education.astro';
+import Contact from '../../components/Contact.astro';
+import Footer from '../../components/Footer.astro';
+import i18n from '../../i18n/es.json';
+
+// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
+// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+---
+
+<Layout title={i18n.title} description={i18n.description}>
+	<HeroSection 
+  title={i18n.heroSection.title}
+  subtitle={i18n.heroSection.subtitle}
+  description={i18n.heroSection.description}
+  techs={i18n.heroSection.techs}
+/>
+	<AboutMe 
+    title={i18n.aboutMe.title}
+    paragraph1={i18n.aboutMe.paragraph1}
+    paragraph2={i18n.aboutMe.paragraph2}
+    tags={i18n.aboutMe.tags}
+/>
+	<SkillsStack 
+  title={i18n.skillsStack.title}
+  technologies={i18n.skillsStack.technologies}
+/>
+	<ProjectsShowcase 
+  title={i18n.projectsShowcase.title}
+  projects={i18n.projectsShowcase.projects}
+/>
+	<Experience 
+	  title={i18n.experienceSection.title}
+	  items={i18n.experienceSection.items}
+	/>
+	<Education 
+	  title={i18n.educationSection.title}
+	  items={i18n.educationSection.items}
+	  skillsLabel="Aptitudes"
+	/>
+	<Contact
+	  title={i18n.contactSection.title}
+	  subtitle={i18n.contactSection.subtitle}
+	  form={i18n.contactSection.form}
+	  links={i18n.contactSection.links}
+	/>
+	<Footer
+	  copyright={i18n.footer.copyright}
+	  links={i18n.footer.links}
+	/>
+</Layout>

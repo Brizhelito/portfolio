@@ -1,5 +1,19 @@
 ---
-// Education.astro: Sección de educación y certificaciones para el portafolio
+/**
+ * @component Education
+ * @description Sección de educación y certificaciones internacionalizada
+ * @prop {string} title - Título de la sección
+ * @prop {string} skillsLabel - Etiqueta para 'Aptitudes' (i18n)
+ * @prop {Array<{
+ *   date: string,
+ *   title: string,
+ *   institution: string,
+ *   skills: string | null,
+ *   credentialLabel: string,
+ *   credentialUrl: string
+ * }>} items - Listado de certificaciones/educación
+ */
+const { title, skillsLabel, items } = Astro.props;
 ---
 
 <style>
@@ -16,37 +30,22 @@
 
 <section class="education-section py-16 bg-slate-50 dark:bg-slate-900 fadein-section">
   <div class="max-w-4xl mx-auto px-4">
-    <h2 class="text-3xl md:text-4xl font-bold text-blue-700 dark:text-blue-400 mb-10 text-center">Educación & Certificaciones</h2>
+    <h2 class="text-3xl md:text-4xl font-bold text-blue-700 dark:text-blue-400 mb-10 text-center">{title}</h2>
     <div class="space-y-8">
-      <!-- Certificación 1: Java OO -->
-      <div class="flex flex-col md:flex-row md:items-center md:gap-6 bg-white dark:bg-slate-800 rounded-lg p-5 shadow-sm transition-all duration-300 hover:shadow-md">
-        <div class="flex-shrink-0 w-full md:w-32 text-blue-600 dark:text-blue-300 font-semibold text-base mb-2 md:mb-0 text-center md:text-left">09/06/2023</div>
-        <div class="flex-1">
-          <h3 class="text-xl font-semibold mb-1 text-slate-900 dark:text-slate-100">Java OO: Entendiendo la Orientación a Objetos</h3>
-          <p class="text-blue-600 dark:text-blue-400 text-sm font-medium mb-1">Alura Latam</p>
-          <p class="text-slate-600 dark:text-slate-300 text-sm mb-1">Aptitudes: <span class="font-medium">Spring Boot · Programación orientada a objetos (POO)</span></p>
-          <a href="https://app.aluracursos.com/certificate/3badeb64-f746-49bb-8e5e-8e1db1e3e1f9" target="_blank" rel="noopener noreferrer" class="inline-block mt-2 px-3 py-1 rounded-full bg-blue-100 text-blue-700 dark:bg-blue-900 dark:text-blue-200 font-semibold text-xs shadow-sm hover:bg-blue-200 dark:hover:bg-blue-800 transition">Ver credencial</a>
+      {items.map((item: any, idx: number) => (
+        <div class="flex flex-col md:flex-row md:items-center md:gap-6 bg-white dark:bg-slate-800 rounded-lg p-5 shadow-sm transition-all duration-300 hover:shadow-md fadein-section" tabindex="0" style="outline:none;">
+          <div class="flex-shrink-0 w-full md:w-32 text-blue-600 dark:text-blue-300 font-semibold text-base mb-2 md:mb-0 text-center md:text-left">{item.date}</div>
+          <div class="flex-1">
+            <h3 class="text-xl font-semibold mb-1 text-slate-900 dark:text-slate-100">{item.title}</h3>
+            <p class="text-blue-600 dark:text-blue-400 text-sm font-medium mb-1">{item.institution}</p>
+            {item.skills && (
+              <p class="text-slate-600 dark:text-slate-300 text-sm mb-1">{skillsLabel}: <span class="font-medium">{item.skills}</span></p>
+            )}
+            <a href={item.credentialUrl} target="_blank" rel="noopener noreferrer" class="inline-block mt-2 px-3 py-1 rounded-full bg-blue-100 text-blue-700 dark:bg-blue-900 dark:text-blue-200 font-semibold text-xs shadow-sm hover:bg-blue-200 dark:hover:bg-blue-800 transition">{item.credentialLabel}</a>
+          </div>
         </div>
-      </div>
-      <!-- Certificación 2: Java Polimorfismo -->
-      <div class="flex flex-col md:flex-row md:items-center md:gap-6 bg-white dark:bg-slate-800 rounded-lg p-5 shadow-sm transition-all duration-300 hover:shadow-md">
-        <div class="flex-shrink-0 w-full md:w-32 text-blue-600 dark:text-blue-300 font-semibold text-base mb-2 md:mb-0 text-center md:text-left">10/06/2023</div>
-        <div class="flex-1">
-          <h3 class="text-xl font-semibold mb-1 text-slate-900 dark:text-slate-100">Java Polimorfismo: Entendiendo herencia e interfaces</h3>
-          <p class="text-blue-600 dark:text-blue-400 text-sm font-medium mb-1">Alura Latam</p>
-          <a href="https://app.aluracursos.com/certificate/renymirelesd/java-parte-3-entendiendo-herencia-interfaces" target="_blank" rel="noopener noreferrer" class="inline-block mt-2 px-3 py-1 rounded-full bg-blue-100 text-blue-700 dark:bg-blue-900 dark:text-blue-200 font-semibold text-xs shadow-sm hover:bg-blue-200 dark:hover:bg-blue-800 transition">Ver credencial</a>
-        </div>
-      </div>
-      <!-- Certificación 3: Desarrollo Personal G5 - ONE -->
-      <div class="flex flex-col md:flex-row md:items-center md:gap-6 bg-white dark:bg-slate-800 rounded-lg p-5 shadow-sm transition-all duration-300 hover:shadow-md">
-        <div class="flex-shrink-0 w-full md:w-32 text-blue-600 dark:text-blue-300 font-semibold text-base mb-2 md:mb-0 text-center md:text-left">19/05/2023</div>
-        <div class="flex-1">
-          <h3 class="text-xl font-semibold mb-1 text-slate-900 dark:text-slate-100">Desarrollo Personal G5 - ONE</h3>
-          <p class="text-blue-600 dark:text-blue-400 text-sm font-medium mb-1">Alura Latam</p>
-          <p class="text-slate-600 dark:text-slate-300 text-sm mb-1">Aptitudes: <span class="font-medium">Desarrollo personal</span></p>
-          <a href="https://app.aluracursos.com/degree/certificate/b9152a7c-2472-4fd0-ab68-6c7a9eccaad7" target="_blank" rel="noopener noreferrer" class="inline-block mt-2 px-3 py-1 rounded-full bg-blue-100 text-blue-700 dark:bg-blue-900 dark:text-blue-200 font-semibold text-xs shadow-sm hover:bg-blue-200 dark:hover:bg-blue-800 transition">Ver credencial</a>
-        </div>
-      </div>
+      ))}
+    </div>
     </div>
   </div>
 </section>

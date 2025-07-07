@@ -1,0 +1,13 @@
+---
+const { pathname } = Astro.url;
+
+const isEnglish = pathname.startsWith('/en');
+
+const targetPath = isEnglish ? '/es' : '/en';
+const linkText = isEnglish ? 'Español' : 'English';
+---
+
+<a href={targetPath} class="fixed bottom-6 left-6 z-50 bg-slate-200 dark:bg-slate-800 text-slate-900 dark:text-slate-100 px-4 py-2 rounded-full shadow-lg flex items-center gap-2 text-sm font-semibold hover:bg-slate-300 dark:hover:bg-slate-700 transition-all focus:outline-none focus:ring-2 focus:ring-blue-400 animate-fadein-up" title={`Switch to ${linkText}`}>
+  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m0 4V5m0 4h6m-6 4h6m6-4v2m0 4h-6m-6 4h6m6 0h-6" /></svg>
+  {linkText}
+</a>

@@ -1,29 +1,45 @@
 ---
-// Experience.astro: Sección de experiencia profesional para el portafolio
+/**
+ * @component Experience
+ * @description Sección de experiencia profesional internacionalizada
+ * @prop {string} title - Título de la sección
+ * @prop {Array<{
+ *   year: string,
+ *   company: string,
+ *   role: string,
+ *   description: string,
+ *   techs: string[]
+ * }>} items - Listado de experiencias
+ */
+const { title, items } = Astro.props;
 ---
 
 <section class="experience-section py-16 bg-white dark:bg-slate-900 fadein-section">
   <div class="max-w-4xl mx-auto px-4">
-    <h2 class="text-3xl md:text-4xl font-bold text-blue-700 dark:text-blue-400 mb-10 text-center">Experiencia Profesional</h2>
+    <h2 class="text-3xl md:text-4xl font-bold text-blue-700 dark:text-blue-400 mb-10 text-center">{title}</h2>
     <div class="flex flex-col items-center justify-center gap-8">
-      <div class="w-full max-w-2xl mx-auto bg-slate-50 dark:bg-slate-800 rounded-xl shadow p-6 md:p-8 fadein-section">
-        <div class="flex flex-col items-start text-left gap-2">
-          <div class="flex flex-wrap gap-2 mb-1">
-            <span class="bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-blue-300 px-3 py-1 rounded-full text-xs font-semibold">2024</span>
-            <span class="bg-purple-100 dark:bg-purple-950 text-purple-700 dark:text-purple-300 px-3 py-1 rounded-full text-xs font-semibold">Java</span>
-            <span class="bg-purple-100 dark:bg-purple-950 text-purple-700 dark:text-purple-300 px-3 py-1 rounded-full text-xs font-semibold">Spring Boot</span>
-            <span class="bg-cyan-100 dark:bg-cyan-950 text-cyan-700 dark:text-cyan-300 px-3 py-1 rounded-full text-xs font-semibold">MySQL</span>
-            <span class="bg-sky-100 dark:bg-sky-950 text-sky-700 dark:text-sky-300 px-3 py-1 rounded-full text-xs font-semibold">React</span>
-            <span class="bg-sky-100 dark:bg-sky-950 text-sky-700 dark:text-sky-300 px-3 py-1 rounded-full text-xs font-semibold">Tailwind CSS</span>
+      {items.map((exp: any, idx: number) => (
+        <div class="w-full max-w-2xl mx-auto bg-slate-50 dark:bg-slate-800 rounded-xl shadow p-6 md:p-8 fadein-section" tabindex="0" style="outline:none;" >
+          <div class="flex flex-col items-start text-left gap-2">
+            <div class="flex flex-wrap gap-2 mb-1">
+              <span class="bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-blue-300 px-3 py-1 rounded-full text-xs font-semibold">{exp.year}</span>
+              {exp.techs.map((tech: string, tIdx: number) => (
+                <span class={
+                  tech === 'Java' || tech === 'Spring Boot' ?
+                    'bg-purple-100 dark:bg-purple-950 text-purple-700 dark:text-purple-300 px-3 py-1 rounded-full text-xs font-semibold'
+                  : tech === 'MySQL' ?
+                    'bg-cyan-100 dark:bg-cyan-950 text-cyan-700 dark:text-cyan-300 px-3 py-1 rounded-full text-xs font-semibold'
+                  : tech === 'React' || tech === 'Tailwind CSS' ?
+                    'bg-sky-100 dark:bg-sky-950 text-sky-700 dark:text-sky-300 px-3 py-1 rounded-full text-xs font-semibold'
+                  : 'bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-200 px-3 py-1 rounded-full text-xs font-semibold'}>{tech}</span>
+              ))}
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 dark:text-slate-100 mb-1">{exp.company}</h3>
+            <p class="text-blue-600 dark:text-blue-400 text-sm font-medium mb-1">{exp.role}</p>
+            <p class="text-base text-slate-700 dark:text-slate-300 mb-1">{exp.description}</p>
           </div>
-          <h3 class="text-xl font-bold text-slate-900 dark:text-slate-100 mb-1">Corpozulia</h3>
-          <p class="text-blue-600 dark:text-blue-400 text-sm font-medium mb-1">Desarrollador Fullstack (Java, Spring Boot, MySQL, React, Tailwind CSS)</p>
-          <p class="text-base text-slate-700 dark:text-slate-300 mb-1">
-            Desarrollo de una plataforma web para la gestión de inventario y solicitudes en la sede de Corpozulia (Machiques). Participé activamente en backend y frontend, colaborando con Angel (@angellvsdev) para lograr una solución integral, robusta y eficiente.
-          </p>
         </div>
-      </div>
-    </div>
+      ))}
     </div>
   </div>
 </section>

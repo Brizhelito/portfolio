@@ -1,26 +1,9 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-import HeroSection from '../components/HeroSection.astro';
-import ProjectsShowcase from '../components/ProjectsShowcase.astro';
-import AboutMe from '../components/AboutMe.astro';
-import SkillsStack from '../components/SkillsStack.astro';
-import Experience from '../components/Experience.astro';
-import Education from '../components/Education.astro';
-import Contact from '../components/Contact.astro';
-import Footer from '../components/Footer.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+// This page redirects to the default language (Spanish)
+return new Response(null, {
+  status: 302, // Found
+  headers: {
+    'Location': '/es'
+  }
+});
 ---
-
-<Layout title="Portafolio de Reny Mireles – Desarrollador Java & Fullstack" description="Portafolio profesional de Reny Mireles. Especialista en Java, desarrollo web, buenas prácticas y aprendizaje continuo.">
-	<HeroSection />
-	<AboutMe />
-	<SkillsStack />
-	<ProjectsShowcase />
-	<Experience />
-	<Education />
-	<Contact />
-	<Footer />
-</Layout>

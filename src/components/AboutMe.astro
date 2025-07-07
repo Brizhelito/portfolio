@@ -1,5 +1,5 @@
 ---
-// AboutMe.astro: Sección sobre mí para el portafolio
+const { title, paragraph1, paragraph2, tags } = Astro.props;
 ---
 
 <style>
@@ -31,26 +31,15 @@ if (typeof window !== 'undefined') {
   <div class="absolute top-0 left-0 w-40 h-40 bg-blue-100 dark:bg-blue-950 rounded-full opacity-40 blur-2xl -z-10 animate-pulse" style="filter: blur(60px);"></div>
   <div class="absolute bottom-0 right-0 w-56 h-56 bg-blue-200 dark:bg-blue-900 rounded-full opacity-30 blur-2xl -z-10 animate-pulse" style="filter: blur(80px);"></div>
   <div class="max-w-4xl mx-auto px-4 text-center relative z-10">
-    <h2 class="text-3xl md:text-4xl font-bold text-blue-700 dark:text-blue-400 mb-4">Sobre mí</h2>
-    <p class="text-lg text-slate-700 dark:text-slate-200 mb-4 leading-relaxed">
-      Me apasiona analizar sistemas, cuestionar supuestos y entender a fondo cómo funcionan las cosas. Veo la tecnología como un campo infinito para experimentar, abstraer ideas y construir soluciones elegantes a problemas complejos.
-    </p>
-    <p class="text-base text-slate-500 dark:text-slate-300 mb-6">
-      Disfruto aprender de forma autodidacta, explorar conceptos desde distintas perspectivas y compartir hallazgos con quienes valoran la lógica y la creatividad. Creo que la mejor innovación surge del pensamiento independiente y la colaboración intelectual.
-    </p>
+    <h2 class="text-3xl md:text-4xl font-bold text-blue-700 dark:text-blue-400 mb-4">{title}</h2>
+    <p class="text-lg text-slate-700 dark:text-slate-200 mb-4 leading-relaxed">{paragraph1}</p>
+    <p class="text-base text-slate-500 dark:text-slate-300 mb-6">{paragraph2}</p>
     <div class="flex flex-wrap justify-center gap-4 mt-6">
-      <span class="inline-flex items-center gap-2 bg-blue-50 dark:bg-blue-950 text-blue-700 dark:text-blue-300 px-4 py-2 rounded-full text-sm font-medium shadow-sm align-middle">
-        Aprendizaje continuo
-      </span>
-      <span class="inline-flex items-center gap-2 bg-blue-50 dark:bg-blue-950 text-blue-700 dark:text-blue-300 px-4 py-2 rounded-full text-sm font-medium shadow-sm align-middle">
-        Trabajo en equipo
-      </span>
-      <span class="inline-flex items-center gap-2 bg-blue-50 dark:bg-blue-950 text-blue-700 dark:text-blue-300 px-4 py-2 rounded-full text-sm font-medium shadow-sm align-middle">
-        Resolución de problemas
-      </span>
-      <span class="inline-flex items-center gap-2 bg-blue-50 dark:bg-blue-950 text-blue-700 dark:text-blue-300 px-4 py-2 rounded-full text-sm font-medium shadow-sm align-middle">
-        Pasión por la tecnología
-      </span>
+      {tags.map((tag: string) => (
+        <span class="inline-flex items-center gap-2 bg-blue-50 dark:bg-blue-950 text-blue-700 dark:text-blue-300 px-4 py-2 rounded-full text-sm font-medium shadow-sm align-middle">
+          {tag}
+        </span>
+      ))}
     </div>
   </div>
 </section>

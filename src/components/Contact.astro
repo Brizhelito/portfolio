@@ -1,5 +1,22 @@
 ---
-// Contact.astro: Sección de contacto para el portafolio
+/**
+ * @component Contact
+ * @description Sección de contacto internacionalizada
+ * @prop {string} title - Título de la sección
+ * @prop {string} subtitle - Subtítulo descriptivo
+ * @prop {{
+ *   namePlaceholder: string,
+ *   emailPlaceholder: string,
+ *   messagePlaceholder: string,
+ *   button: string
+ * }} form - Textos del formulario
+ * @prop {{
+ *   email: string,
+ *   github: string,
+ *   linkedin: string
+ * }} links - Labels de los enlaces
+ */
+const { title, subtitle, form, links } = Astro.props;
 ---
 
 <style>
@@ -16,20 +33,33 @@
 
 <section class="contact-section py-16 bg-white dark:bg-slate-900 fadein-section">
   <div class="max-w-2xl mx-auto px-4 text-center">
-    <h2 class="text-3xl md:text-4xl font-bold text-blue-700 dark:text-blue-400 mb-8">Contacto</h2>
-    <p class="text-base text-slate-600 dark:text-slate-300 mb-8">¿Te gustaría trabajar conmigo, tienes una propuesta o solo quieres saludar? ¡Hablemos!</p>
+    <h2 class="text-3xl md:text-4xl font-bold text-blue-700 dark:text-blue-400 mb-8">{title}</h2>
+    <p class="text-base text-slate-600 dark:text-slate-300 mb-8">{subtitle}</p>
     <form class="space-y-6" name="contact" method="POST" action="https://formspree.io/f/mpwreoev">
       <div class="flex flex-col gap-2">
-        <input type="text" name="name" required placeholder="Nombre" class="border border-slate-300 dark:border-slate-700 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-200 dark:focus:ring-blue-900 bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100" />
-        <input type="email" name="email" required placeholder="Correo electrónico" class="border border-slate-300 dark:border-slate-700 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-200 dark:focus:ring-blue-900 bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100" />
+        <input type="text" name="name" required placeholder={form.namePlaceholder} class="border border-slate-300 dark:border-slate-700 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-200 dark:focus:ring-blue-900 bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100" />
+        <input type="email" name="email" required placeholder={form.emailPlaceholder} class="border border-slate-300 dark:border-slate-700 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-200 dark:focus:ring-blue-900 bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100" />
       </div>
-      <textarea name="message" required placeholder="Tu mensaje" rows="4" class="w-full border border-slate-300 dark:border-slate-700 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-200 dark:focus:ring-blue-900 bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100"></textarea>
-      <button type="submit" class="bg-blue-600 dark:bg-blue-500 text-white px-6 py-2 rounded font-semibold hover:bg-blue-700 dark:hover:bg-blue-400 transition">Enviar mensaje</button>
+      <textarea name="message" required placeholder={form.messagePlaceholder} rows="4" class="w-full border border-slate-300 dark:border-slate-700 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-200 dark:focus:ring-blue-900 bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100"></textarea>
+      <button type="submit" class="bg-blue-600 dark:bg-blue-500 text-white px-6 py-2 rounded font-semibold hover:bg-blue-700 dark:hover:bg-blue-400 transition">{form.button}</button>
     </form>
-    <div class="mt-8 flex flex-wrap justify-center gap-6 text-blue-600 dark:text-blue-400">
-      <a href="mailto:renymireles@outlook.com" class="hover:underline">renymireles@outlook.com</a>
-      <a href="https://github.com/Brizhelito" target="_blank" rel="noopener" class="hover:underline">GitHub</a>
-      <a href="https://www.linkedin.com/in/reny-david-mireles-bozo-523147240" target="_blank" rel="noopener" class="hover:underline">LinkedIn</a>
+    <div class="mt-8 flex flex-wrap justify-center gap-4">
+      <a href="mailto:{links.email}" class="inline-flex items-center gap-2 bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-blue-200 px-3 py-1 rounded-full font-semibold text-sm shadow-sm border border-blue-200 dark:border-blue-800 hover:bg-blue-200 dark:hover:bg-blue-900 transition" aria-label="Email">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8m-18 8h18a2 2 0 002-2V8a2 2 0 00-2-2H3a2 2 0 00-2 2v6a2 2 0 002 2z"/></svg>
+        {links.email}
+      </a>
+      <a href="https://github.com/Brizhelito" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-slate-100 dark:bg-slate-800 text-blue-700 dark:text-blue-200 px-3 py-1 rounded-full font-semibold text-sm shadow-sm border border-slate-200 dark:border-slate-700 hover:bg-slate-200 dark:hover:bg-slate-700 transition" aria-label="GitHub">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.484 2 12.021c0 4.426 2.865 8.184 6.839 9.504.5.092.682-.217.682-.483 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.342-3.369-1.342-.454-1.156-1.11-1.464-1.11-1.464-.908-.621.069-.609.069-.609 1.004.07 1.532 1.032 1.532 1.032.892 1.53 2.341 1.089 2.91.833.092-.647.35-1.09.636-1.342-2.221-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.273.098-2.654 0 0 .84-.27 2.75 1.025A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.338 1.909-1.294 2.748-1.025 2.748-1.025.546 1.381.202 2.401.1 2.654.64.7 1.028 1.595 1.028 2.688 0 3.847-2.337 4.695-4.566 4.944.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.744 0 .268.18.579.688.481C19.138 20.2 22 16.447 22 12.021 22 6.484 17.523 2 12 2z"/></svg>
+        {links.github}
+      </a>
+      <a href="https://www.linkedin.com/in/reny-david-mireles-bozo-523147240" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-blue-50 dark:bg-blue-900 text-blue-700 dark:text-blue-200 px-3 py-1 rounded-full font-semibold text-sm shadow-sm border border-blue-200 dark:border-blue-800 hover:bg-blue-100 dark:hover:bg-blue-800 transition" aria-label="LinkedIn">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.268c-.966 0-1.75-.791-1.75-1.764 0-.974.784-1.764 1.75-1.764s1.75.79 1.75 1.764c0 .973-.784 1.764-1.75 1.764zm13.5 11.268h-3v-5.604c0-1.337-.024-3.063-1.867-3.063-1.868 0-2.154 1.459-2.154 2.968v5.699h-3v-10h2.881v1.367h.041c.401-.761 1.379-1.563 2.841-1.563 3.039 0 3.6 2.001 3.6 4.599v5.597z"/></svg>
+        {links.linkedin}
+      </a>
+      <a href={`https://wa.me/${links.whatsapp.replace(/\D/g, '')}`} target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-200 px-3 py-1 rounded-full font-semibold text-sm shadow-sm border border-green-200 dark:border-green-800 hover:bg-green-200 dark:hover:bg-green-800 transition" aria-label="WhatsApp">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.472-.148-.67.15-.197.297-.767.966-.94 1.164-.173.198-.347.223-.644.075-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.372-.025-.521-.075-.149-.669-1.611-.916-2.206-.242-.579-.487-.5-.669-.51-.173-.007-.372-.009-.571-.009-.198 0-.52.075-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.099 3.205 5.077 4.372.711.306 1.263.489 1.695.625.713.227 1.362.195 1.875.118.572-.085 1.758-.719 2.006-1.413.248-.694.248-1.288.173-1.413-.074-.124-.272-.198-.57-.347zm-5.421 7.618c-4.971 0-9-4.029-9-9 0-1.591.416-3.102 1.203-4.428l-1.282-4.691 4.808 1.262c1.293-.705 2.75-1.113 4.271-1.113 4.971 0 9 4.029 9 9s-4.029 9-9 9zm0-16c-3.866 0-7 3.134-7 7 0 1.389.408 2.684 1.111 3.782l-.741 2.713 2.786-.733c1.048.287 2.161.438 3.344.438 3.866 0 7-3.134 7-7s-3.134-7-7-7z"/></svg>
+        WhatsApp
+      </a>
     </div>
   </div>
 </section>
