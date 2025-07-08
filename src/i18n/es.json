@@ -69,8 +69,8 @@
         "techs": ["React", "TypeScript", "TailwindCSS", "Node.js", "PostgreSQL"],
         "image": "/projects/finwise_dashboard.webp",
         "imageAlt": "FinWise",
-        "demoUrl": "https://finwise-demo.vercel.app",
-        "repoUrl": "https://github.com/renymireles/finwise",
+        "demoUrl": "https://finwise-nexjs.vercel.app",
+        "repoUrl": "https://github.com/Brizhelito/finwise-nexjs",
         "labels": {
           "demo": "Demo",
           "repo": "Repositorio",
