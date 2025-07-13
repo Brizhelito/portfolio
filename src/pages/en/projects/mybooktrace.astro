@@ -1,0 +1,91 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+const data = {
+  title: "MyBookTrace: Track Your Reading Journey",
+  description: `MyBookTrace is a mobile application developed with Flutter designed to help readers track and manage their reading habits. The app allows users to keep detailed records of their books, create reading sessions, set personalized goals, and visualize their progress through comprehensive statistics.`,
+  features: [
+    "Book Registration: Easily add books to your personal library with details such as title, author, genre, total pages, and cover images.",
+    "Reading Sessions: Create and log reading sessions with start and end times, pages read, and notes about your progress.",
+    "Goal Setting: Set personalized reading goals such as books per year, pages per day, or minutes of reading time, with progress tracking.",
+    "Detailed Statistics: Visualize your reading habits through intuitive charts and statistics showing your reading pace, favorite genres, completion rates, and more.",
+    "Reading Reminders: Schedule customizable notifications to maintain consistent reading habits.",
+    "Book Notes & Highlights: Save memorable quotes, thoughts, and reflections while reading.",
+    "Cloud Synchronization: All your data is securely stored and synced across devices."
+  ],
+  duration: "5 days",
+  deployment: "Mobile App (Android/iOS)",
+  github: "https://github.com/Brizhelito/my_book_trace",
+  images: [
+    "/projects/mybooktrace/book_list.jpg",
+    "/projects/mybooktrace/book_detail.jpg",
+    "/projects/mybooktrace/home_screen.jpeg",
+    "/projects/mybooktrace/reading_session.jpg",
+    "/projects/mybooktrace/statistics.jpg"
+  ]
+};
+---
+
+<Layout>
+<div class="min-h-screen bg-slate-50 dark:bg-slate-900 py-12 px-4 md:px-0 transition-colors duration-500">
+  <div class="max-w-3xl mx-auto">
+    <div class="flex flex-col gap-4 items-center text-center animate-fadein">
+      <h1 class="text-3xl md:text-5xl font-bold text-blue-700 dark:text-blue-400 drop-shadow mb-2">MyBookTrace: Track Your Reading Journey</h1>
+      <p class="text-lg text-slate-700 dark:text-slate-200 mb-4">{data.description}</p>
+      <div class="flex flex-wrap gap-2 justify-center mb-2">
+        <span class="bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-blue-300 px-3 py-1 rounded-full text-xs font-semibold shadow-sm">Flutter</span>
+        <span class="bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-blue-300 px-3 py-1 rounded-full text-xs font-semibold shadow-sm">Dart</span>
+        <span class="bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-blue-300 px-3 py-1 rounded-full text-xs font-semibold shadow-sm">Firebase</span>
+        <span class="bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-blue-300 px-3 py-1 rounded-full text-xs font-semibold shadow-sm">SQLite</span>
+        <a href={data.github} target="_blank" class="bg-slate-200 dark:bg-slate-800 text-blue-700 dark:text-blue-200 px-3 py-1 rounded-full text-xs font-semibold shadow-sm hover:underline transition">Repository</a>
+      </div>
+    </div>
+
+    <div class="mt-8 bg-white dark:bg-slate-800 rounded-xl shadow-lg p-6 md:p-10 animate-fadein-up">
+      <h2 class="text-2xl font-bold text-purple-700 dark:text-purple-300 mb-4 flex items-center gap-2">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
+        Key Features
+      </h2>
+      <ul class="list-disc list-inside text-slate-700 dark:text-slate-200 space-y-2">
+        {data.features.map(feature => (
+          <li>{feature}</li>
+        ))}
+      </ul>
+    </div>
+
+    <div class="mt-8 bg-white dark:bg-slate-800 rounded-xl shadow-lg p-6 md:p-10 animate-fadein-up delay-100">
+      <h2 class="text-2xl font-bold text-blue-700 dark:text-blue-400 mb-4 flex items-center gap-2">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+        Project Details
+      </h2>
+      <ul class="list-none text-slate-700 dark:text-slate-200 space-y-2">
+        <li><strong>Development Period:</strong> {data.duration}</li>
+        <li><strong>Deployment:</strong> {data.deployment}</li>
+        <li><strong>Repository:</strong> <a href={data.github} target="_blank" class="text-blue-700 dark:text-blue-400 underline hover:opacity-80">{data.github}</a></li>
+      </ul>
+    </div>
+
+    <div class="mt-8 bg-white dark:bg-slate-800 rounded-xl shadow-lg p-6 md:p-10 animate-fadein-up delay-200">
+      <h2 class="text-2xl font-bold text-green-700 dark:text-green-300 mb-4 flex items-center gap-2">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7m0 0l-7 7m7-7H3" /></svg>
+        Gallery
+      </h2>
+      <div class="mybooktrace-gallery grid gap-4 md:grid-cols-2">
+        {data.images.map(image => (
+          <img src={image} alt="MyBookTrace Screenshot" class="rounded-lg shadow-md border border-slate-200 dark:border-slate-700 w-full h-auto object-contain transition-transform duration-300 hover:scale-105 cursor-pointer bg-slate-100 dark:bg-slate-900" loading="lazy" />
+        ))}
+      </div>
+    </div>
+
+    <div class="mt-8 bg-white dark:bg-slate-800 rounded-xl shadow-lg p-6 md:p-10 animate-fadein-up delay-300 flex flex-col items-center">
+      <a href="/en#projects" class="inline-flex items-center gap-1.5 bg-blue-100 hover:bg-blue-200 dark:bg-blue-900 dark:hover:bg-blue-800 text-blue-700 dark:text-blue-300 px-4 py-2 rounded-lg text-sm font-medium transition">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="m15 18-6-6 6-6"></path></svg>
+        Back to Projects
+      </a>
+    </div>
+  </div>
+  <a href="/en" class="fixed bottom-6 right-6 z-50 bg-blue-700 dark:bg-blue-400 text-white dark:text-slate-900 px-5 py-3 rounded-full shadow-lg flex items-center gap-2 text-sm font-semibold hover:bg-blue-800 dark:hover:bg-blue-300 transition-all focus:outline-none focus:ring-2 focus:ring-blue-400 animate-fadein-up" title="Back to home" aria-label="Back to home">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l9-9 9 9M4 10v10a1 1 0 001 1h3m10-11v11a1 1 0 01-1 1h-3" /></svg>
+    Home
+  </a>
+</div>
+</Layout>

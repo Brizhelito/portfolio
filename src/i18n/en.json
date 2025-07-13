@@ -44,10 +44,32 @@
     "title": "Featured Projects",
     "projects": [
       {
+        "title": "MyBookTrace",
+        "featured": true,
+        "description": "Mobile app developed with Flutter for tracking and managing reading habits. Users can register books, create reading sessions, set reading goals, and visualize their progress through detailed statistics.",
+        "techs": ["Flutter", "Dart", "Firebase", "SQLite"],
+        "image": "/projects/mybooktrace.png",
+        "imageAlt": "MyBookTrace App",
+        "detailsUrl": "/en/projects/mybooktrace",
+        "repoUrl": "https://github.com/Brizhelito/my_book_trace",
+        "labels": {
+          "demo": "Demo",
+          "repo": "Repository",
+          "featured": "Featured",
+          "details": "See more"
+        }
+      },
+      {
         "title": "POS System (Next.js)",
         "featured": true,
         "description": "Modern POS for sales, inventory, and customers in retail. Agile interface, reports, and dark mode.",
-        "techs": ["Next.js", "TypeScript", "TailwindCSS", "Prisma", "PostgreSQL"],
+        "techs": [
+          "Next.js",
+          "TypeScript",
+          "TailwindCSS",
+          "Prisma",
+          "PostgreSQL"
+        ],
         "image": "/projects/pos-nextjs.webp",
         "imageAlt": "POS Next.js",
         "demoUrl": "https://nextjs-pos-xi.vercel.app",
@@ -58,15 +80,29 @@
           "featured": "Featured"
         },
         "credentials": [
-          { "role": "Demo Admin", "user": "admin@gmail.com", "pass": "admin123" },
-          { "role": "Demo Cashier", "user": "cajero@gmail.com", "pass": "cajero123" }
+          {
+            "role": "Demo Admin",
+            "user": "admin@gmail.com",
+            "pass": "admin123"
+          },
+          {
+            "role": "Demo Cashier",
+            "user": "cajero@gmail.com",
+            "pass": "cajero123"
+          }
         ]
       },
       {
         "title": "Finance Manager (FinWise)",
         "featured": true,
         "description": "App to manage personal finances, budgets, and savings goals. Modern UI, metrics, security, and private user panel.",
-        "techs": ["React", "TypeScript", "TailwindCSS", "Node.js", "PostgreSQL"],
+        "techs": [
+          "React",
+          "TypeScript",
+          "TailwindCSS",
+          "Node.js",
+          "PostgreSQL"
+        ],
         "image": "/projects/finwise_dashboard.webp",
         "imageAlt": "FinWise",
         "demoUrl": "https://finwise-nexjs.vercel.app",
@@ -76,9 +112,7 @@
           "repo": "Repository",
           "featured": "Featured"
         },
-        "credentials": [
-          { "role": "Demo", "user": "demo", "pass": "Demo123!" }
-        ]
+        "credentials": [{ "role": "Demo", "user": "demo", "pass": "Demo123!" }]
       },
       {
         "title": "Matrixezz",
