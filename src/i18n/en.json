@@ -73,7 +73,7 @@
         "image": "/projects/pos-nextjs.webp",
         "imageAlt": "POS Next.js",
         "demoUrl": "https://nextjs-pos-xi.vercel.app",
-        "repoUrl": "https://github.com/renymireles/nextjs-pos",
+        "repoUrl": "https://github.com/Brizhelito/pos-system",
         "labels": {
           "demo": "Demo",
           "repo": "Repository",
