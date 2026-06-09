@@ -1,198 +1,248 @@
 {
   "nav": {
-    "experience": "Experiencia",
-    "projects": "Proyectos",
-    "education": "Educación",
+    "hero": "Inicio",
     "about": "Sobre mí",
-    "contact": "Contacto"
+    "skills": "Skills",
+    "projects": "Proyectos",
+    "experience": "Experiencia",
+    "contact": "Contacto",
+    "download_cv": "Descargar CV"
   },
-  "title": "Portafolio de Reny",
-  "description": "Portafolio de Reny, desarrollador de software y entusiasta de la tecnología.",
-  "language": "English",
-  "aboutMe": {
-    "title": "Sobre mí",
-    "paragraph1": "Me apasiona analizar sistemas, cuestionar supuestos y entender a fondo cómo funcionan las cosas. Veo la tecnología como un campo infinito para experimentar, abstraer ideas y construir soluciones elegantes a problemas complejos.",
-    "paragraph2": "Disfruto aprender de forma autodidacta, explorar conceptos desde distintas perspectivas y compartir hallazgos con quienes valoran la lógica y la creatividad. Creo que la mejor innovación surge del pensamiento independiente y la colaboración intelectual.",
-    "tags": [
-      "Aprendizaje continuo",
-      "Trabajo en equipo",
-      "Resolución de problemas",
-      "Pasión por la tecnología"
-    ]
-  },
-  "skillsStack": {
-    "title": "Habilidades & Stack",
-    "technologies": [
-      { "name": "React", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg", "alt": "React" },
-      { "name": "Next.js", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg", "alt": "Next.js" },
-      { "name": "JavaScript", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg", "alt": "JavaScript" },
-      { "name": "TypeScript", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg", "alt": "TypeScript" },
-      { "name": "Java", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg", "alt": "Java" },
-      { "name": "Spring Boot", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg", "alt": "Spring Boot" }
-    ]
-  },
-  "heroSection": {
-    "title": "Hola, soy <span class=\"text-blue-600 dark:text-blue-400\">Reny Mireles</span>",
-    "subtitle": "Desarrollador Fullstack",
-    "description": [
-      "Mi enfoque es crear productos digitales que resuelvan problemas reales, combinando creatividad, lógica y una visión de largo plazo. Busco el equilibrio entre la experiencia de usuario, la calidad técnica y el impacto positivo en cada proyecto.",
-      "Apasionado por la innovación, la mejora continua y el aprendizaje colaborativo."
+  "hero": {
+    "caption": "// SOFTWARE DEVELOPER",
+    "name": "Reny Mireles",
+    "roles": [
+      "Fullstack Developer",
+      "Distributed Systems",
+      "Cross-Platform Apps"
     ],
-    "techs": ["Next.js", "React", "JavaScript", "TypeScript", "Java", "Spring Boot"]
+    "description": "Desarrollador de software autodidacta apasionado por construir productos robustos. Me encanta explorar tecnologías complejas y transformar problemas en soluciones eficientes, desde el backend hasta la experiencia de usuario.",
+    "cta_primary": "Ver Proyectos",
+    "cta_secondary": "Descargar CV",
+    "avatar_alt": "Foto de Reny Mireles",
+    "badges": {
+      "stack": "Flutter · Go · React",
+      "systems": "Arquitecturas Escalables",
+      "available": "Buscando mi primer rol formal ✦"
+    }
   },
-  "projectsShowcase": {
+  "about": {
+    "label": "// ABOUT",
+    "title": "Sobre mí",
+    "bio": "Mi camino en la programación ha sido 100% autodidacta. Mi curiosidad por entender cómo funcionan las cosas me ha llevado a explorar desde el desarrollo móvil hasta el diseño de sistemas distribuidos. No tengo un background tradicional, pero lo compenso construyendo proyectos reales, estudiando arquitecturas complejas y escribiendo código del que me pueda sentir orgulloso. Actualmente busco mi primera oportunidad profesional a tiempo completo para aportar valor y seguir creciendo.",
+    "status": "Buscando mi primer rol formal",
+    "location": "Venezuela 🇻🇪 / Remoto",
+    "langs_label": "Idiomas",
+    "langs": "ES 🇻🇪 Nativo · EN 🇺🇸 Intermedio",
+    "skills_label": "Soft skills",
+    "skills": [
+      "Aprendizaje autodidacta",
+      "Resolución de problemas",
+      "Adaptabilidad técnica",
+      "Comunicación efectiva"
+    ],
+    "focus_label": "Mi enfoque",
+    "focus_title": "Aprender construyendo y resolver problemas reales con código limpio.",
+    "focus_points": [
+      "Diseño de arquitecturas escalables explorando tecnologías modernas.",
+      "Desarrollo de productos fullstack priorizando el rendimiento y la experiencia de usuario.",
+      "Creación de aplicaciones multiplataforma orientadas a resolver necesidades reales."
+    ]
+  },
+  "skills": {
+    "label": "// SKILLS",
+    "title": "Stack Técnico",
+    "subtitle": "Herramientas y tecnologías que utilizo para construir software escalable y eficiente.",
+    "note": "El contexto y la aplicación de cada tecnología se detallan a fondo en mis proyectos.",
+    "categories": {
+      "Frontend": ["React", "Next.js", "TypeScript", "JavaScript", "Tailwind CSS", "Astro"],
+      "Mobile": ["Flutter", "Dart", "Android (Kotlin)"],
+      "Backend": ["Go (Fiber)", "Java", "Spring Boot", "Node.js"],
+      "Database": ["PostgreSQL", "SQLite (Drift)", "Redis (Upstash)", "Neon"],
+      "Edge / Infra": ["Cloudflare Workers", "Durable Objects", "Firebase FCM"],
+      "DevOps / Tools": ["GitHub Actions", "Docker", "Vercel", "Sentry"],
+      "Auth / Security": ["WebAuthn / Passkeys", "OAuth 2.0", "Ed25519", "JWT"],
+      "Architecture": ["Distributed Systems", "Plugin Architecture", "CRDT Sync", "REST API", "LWW"]
+    }
+  },
+  "projects": {
+    "label": "// PROJECTS",
     "title": "Proyectos Destacados",
-    "projects": [
-      {
-        "title": "MyBookTrace",
-        "featured": true,
-        "description": "Aplicación móvil desarrollada con Flutter para rastrear y gestionar tus hábitos de lectura. Permite registrar libros, crear sesiones de lectura, establecer metas y visualizar el progreso a través de estadísticas detalladas.",
-        "techs": ["Flutter", "Dart", "Firebase", "SQLite"],
-        "image": "/projects/mybooktrace.png",
-        "imageAlt": "MyBookTrace App",
-        "detailsUrl": "/es/projects/mybooktrace",
-        "repoUrl": "https://github.com/Brizhelito/my_book_trace",
-        "labels": {
-          "demo": "Demo",
-          "repo": "Repositorio",
-          "featured": "Destacado",
-          "details": "Ver más"
-        }
+    "subtitle": "Una selección de productos que destacan por su arquitectura, ejecución técnica y experiencia de usuario.",
+    "selection_note": "Casos de estudio enfocados en la resolución de problemas y el impacto real.",
+    "featured_badge": "⭐ PROYECTO PRINCIPAL",
+    "view_repo": "Ver Repositorio",
+    "view_demo": "Ver Demo",
+    "view_details": "Ver detalle",
+    "close_details": "Cerrar detalle",
+    "download_apk": "Descargar APK",
+    "visit_website": "Visitar Web",
+    "credentials": "Credenciales",
+    "detail_eyebrow": "Detalle del proyecto",
+    "empty_gallery": "Este proyecto se explica mejor por su arquitectura y alcance que por una galería visual.",
+    "detail_labels": {
+      "overview": "visión general",
+      "context": "contexto",
+      "stack": "stack",
+      "delivery": "entrega",
+      "highlights": "puntos clave",
+      "gallery": "material visual"
+    },
+    "kumoriya": {
+      "subtitle": "Real-time cross-platform content aggregation engine",
+      "description": "Sistema distribuido de 3 capas con arquitectura plugin-first. Unifica múltiples fuentes de contenido mediante indexación dinámica, normalización de metadatos y edge computing, con foco en escalabilidad, extensibilidad y experiencia cross-platform.",
+      "architecture": "arquitectura",
+      "points": [
+        "Arquitectura plugin-first (10+ source plugins, 18+ resolver plugins) para agregar fuentes sin rehacer la base.",
+        "Sincronización LWW CRDT y tiempo real vía WebSockets + Durable Objects para Watch Parties.",
+        "Seguridad moderna con WebAuthn/Passkeys + Ed25519 para firma de JWT."
+      ],
+      "stats": {
+        "layers": "capas",
+        "packages": "packages",
+        "plugins": "plugins",
+        "tests": "tests"
+      }
+    },
+    "items": {
+      "pos": {
+        "title": "POS System",
+        "description": "Sistema integral de punto de venta con gestión de inventario, clientes y dashboards analíticos basados en roles.",
+        "highlight": "Proyecto Fullstack",
+        "badge": "Web App"
       },
-      {
-        "title": "Sistema POS (Next.js)",
-        "featured": true,
-        "description": "POS moderno para ventas, inventario y clientes en comercios. Interfaz ágil, reportes y modo oscuro.",
-        "techs": [
-          "Next.js",
-          "TypeScript",
-          "TailwindCSS",
-          "Prisma",
-          "PostgreSQL"
+      "finwise": {
+        "title": "Finwise",
+        "description": "Plataforma de gestión financiera personal con seguimiento de presupuestos, metas y visualización de métricas.",
+        "highlight": "Gestión de estado y UX",
+        "badge": "Dashboard"
+      },
+      "mybooktrace": {
+        "title": "MyBookTrace",
+        "description": "Aplicación móvil multiplataforma para el seguimiento de hábitos de lectura con persistencia de datos eficiente.",
+        "highlight": "Arquitectura Local-First",
+        "badge": "Mobile App"
+      },
+      "matrix": {
+        "title": "Matrixezz",
+        "description": "Herramienta educativa para la resolución de teoremas de matrices complejos delegando el cálculo algorítmico al servidor.",
+        "highlight": "Lógica y Algoritmos",
+        "badge": "EdTech"
+      }
+    },
+    "details": {
+      "kumoriya": {
+        "title": "Kumoriya",
+        "subtitle": "Motor de agregación de contenido multiplataforma en tiempo real.",
+        "overview": "Plataforma diseñada para unificar fuentes de contenido fragmentadas en una experiencia nativa fluida. Destaca por la integración de un cliente Flutter, un backend en Go y procesamiento en tiempo real en el edge.",
+        "context": "Proyecto principal que demuestra capacidad para diseñar sistemas distribuidos complejos.",
+        "stack": "Flutter, Dart, Go, Fiber, Cloudflare Workers, Durable Objects, PostgreSQL, Redis, FCM, Sentry, Docker.",
+        "delivery": "Cliente Android/Windows, API RESTful y servicios edge en tiempo real.",
+        "highlights": [
+          "Arquitectura basada en plugins (10+ source plugins, 18+ resolver plugins) y monorepo con 45+ paquetes Dart.",
+          "Sincronización LWW CRDT con push/pull periódico, y tiempo real vía WebSockets + Durable Objects para Watch Parties.",
+          "Seguridad moderna con WebAuthn/Passkeys y firma de JWT con Ed25519.",
+          "Mecanismo de actualización OTA, internacionalización (ARB files) y bindings nativos de ExoPlayer (Kotlin).",
+          "Motor kumoriya_matching para normalización de títulos que actúa como ETL en el cliente móvil.",
+          "Cobertura de pruebas con más de 65 archivos de tests."
         ],
-        "image": "/projects/pos-nextjs.webp",
-        "imageAlt": "POS Next.js",
-        "demoUrl": "https://nextjs-pos-xi.vercel.app",
-        "repoUrl": "https://github.com/Brizhelito/pos-system",
-        "labels": {
-          "demo": "Demo",
-          "repo": "Repositorio",
-          "featured": "Destacado"
-        },
-        "credentials": [
-          {
-            "role": "Demo Admin",
-            "user": "admin@gmail.com",
-            "pass": "admin123"
-          },
-          {
-            "role": "Demo Cajero",
-            "user": "cajero@gmail.com",
-            "pass": "cajero123"
-          }
+        "gallery_note": "La arquitectura técnica y documentación detallada se encuentran disponibles en el repositorio."
+      },
+      "pos": {
+        "title": "POS System",
+        "subtitle": "Sistema de gestión comercial optimizado para operaciones diarias.",
+        "overview": "Plataforma integral que unifica ventas, inventario y gestión de clientes. Diseñada para optimizar las operaciones comerciales mediante una interfaz rápida, flujos de trabajo claros y una arquitectura modular con feature slices verticales.",
+        "context": "Aplicación web fullstack orientada a resolver necesidades empresariales (B2B).",
+        "stack": "Next.js 15, TypeScript, Tailwind CSS, Prisma, PostgreSQL, Radix UI, Zod.",
+        "delivery": "Aplicación web responsiva con panel de administración y roles de usuario.",
+        "highlights": [
+          "Implementación de control de acceso basado en roles (RBAC) para administradores y vendedores.",
+          "Exportación de datos con ExcelJS/jsPDF y atajos de teclado para operación sin mouse.",
+          "Visualización de datos con Nivo/Recharts para reportes analíticos."
         ]
       },
-      {
-        "title": "Gestor de Finanzas (FinWise)",
-        "featured": true,
-        "description": "App para gestionar finanzas personales, presupuestos y metas de ahorro. Interfaz moderna, métricas, seguridad y panel privado para usuarios.",
-        "techs": [
-          "React",
-          "TypeScript",
-          "TailwindCSS",
-          "Node.js",
-          "PostgreSQL"
-        ],
-        "image": "/projects/finwise_dashboard.webp",
-        "imageAlt": "FinWise",
-        "demoUrl": "https://finwise-nexjs.vercel.app",
-        "repoUrl": "https://github.com/Brizhelito/finwise-nexjs",
-        "labels": {
-          "demo": "Demo",
-          "repo": "Repositorio",
-          "featured": "Destacado"
-        },
-        "credentials": [{ "role": "Demo", "user": "demo", "pass": "Demo123!" }]
+      "finwise": {
+        "title": "Finwise",
+        "subtitle": "Dashboard financiero centrado en la experiencia de usuario y visualización de datos.",
+        "overview": "Plataforma de gestión financiera personal enfocada en la claridad visual y la usabilidad. Implementa gestión de sesiones, presupuestos y seguimiento de metas en una interfaz clara.",
+        "context": "Proyecto fullstack que demuestra habilidades en UX/UI y separación de responsabilidades en capas.",
+        "stack": "Next.js, TypeScript, Prisma, PostgreSQL, React Context.",
+        "delivery": "Aplicación web con panel privado y visualización de métricas.",
+        "highlights": [
+          "Estructura en capas (repositories, services, controllers, providers) para una clara separación de responsabilidades.",
+          "Integración fluida de módulos de transacciones, presupuestos y metas financieras.",
+          "Esquema relacional normalizado con Prisma."
+        ]
       },
-      {
+      "mybooktrace": {
+        "title": "MyBookTrace",
+        "subtitle": "Aplicación móvil para el seguimiento de hábitos de lectura y progreso personal.",
+        "overview": "Aplicación diseñada para ofrecer una experiencia de usuario fluida en el registro de lecturas. Destaca por su arquitectura local-first, garantizando un rendimiento óptimo y disponibilidad offline.",
+        "context": "Demostración de desarrollo móvil multiplataforma con enfoque en rendimiento y UX.",
+        "stack": "Flutter, Dart, Provider, Go Router, SQLite, FL Chart.",
+        "delivery": "Aplicación móvil con persistencia de datos local y visualización de estadísticas.",
+        "highlights": [
+          "Arquitectura en capas con separación de responsabilidades (presentación, repositorios, servicios).",
+          "Implementación de base de datos local (SQLite) para una experiencia offline-first.",
+          "Visualización de datos con FL Chart y navegación con Go Router."
+        ]
+      },
+      "matrix": {
         "title": "Matrixezz",
-        "featured": false,
-        "description": "Matrixezz resuelve operaciones y teoremas de matrices con explicaciones claras paso a paso. Backend robusto en Java/Spring Boot. Ideal para aprender matemáticas avanzadas.",
-        "techs": ["Java", "Spring Boot", "Maven", "Vanilla JS"],
-        "image": "/projects/matrixezz/determinant.png",
-        "imageAlt": "Matrixezz",
-        "detailsUrl": "/es/projects/matrixezz",
-        "repoUrl": "https://github.com/angellvsdev/Matrixezz",
-        "labels": {
-          "details": "Ver más",
-          "repo": "Repositorio"
-        }
+        "subtitle": "Plataforma educativa para la resolución de operaciones matriciales complejas.",
+        "overview": "Herramienta desarrollada para un entorno académico real, capaz de resolver teoremas matemáticos avanzados. Delega el cálculo algorítmico al backend para garantizar precisión numérica y separación de responsabilidades, manteniendo el cliente ligero.",
+        "context": "Proyecto que destaca habilidades en desarrollo backend, algoritmos y colaboración en equipo.",
+        "stack": "Java, Spring Boot, Maven, HTML, SCSS, JavaScript.",
+        "delivery": "API RESTful en Java con cliente web para la visualización de resultados paso a paso.",
+        "highlights": [
+          "Implementación de algoritmos matemáticos complejos (Gauss, Gauss-Jordan, determinantes) en el servidor.",
+          "Sistema de flags (Locked, Process Inclusion, Fatal Error, Warning) para una mejor UX/DX.",
+          "Desarrollo colaborativo enfocado en resolver una necesidad educativa específica."
+        ]
       }
-    ]
+    }
   },
-  "experienceSection": {
-    "title": "Experiencia Profesional",
+  "experience": {
+    "label": "// WORK",
+    "title": "Experiencia Freelance",
     "items": [
       {
         "year": "2024",
         "company": "Corpozulia",
-        "role": "Desarrollador Fullstack (Java, Spring Boot, MySQL, React, Tailwind CSS)",
-        "description": "Desarrollo de una plataforma web para la gestión de inventario y solicitudes en la sede de Corpozulia (Machiques). Participé activamente en backend y frontend, colaborando con Angel (@angellvsdev) para lograr una solución integral, robusta y eficiente.",
-        "techs": ["Java", "Spring Boot", "MySQL", "React", "Tailwind CSS"]
+        "place": "Machiques, Venezuela",
+        "role": "Desarrollador Fullstack (Freelance)",
+        "description": "Desarrollo de una plataforma interna para la gestión de inventario y solicitudes operativas como proyecto independiente remunerado. Me encargué del diseño de la arquitectura y la implementación fullstack.",
+        "tags": ["Java", "Spring Boot", "MySQL", "React", "Tailwind CSS"],
+        "note": "Impacto: Digitalización de procesos internos, mejorando la eficiencia en la gestión de recursos de la institución."
       }
     ]
   },
-  "educationSection": {
-    "title": "Educación & Certificaciones",
-    "items": [
-      {
-        "date": "09/06/2023",
-        "title": "Java OO: Entendiendo la Orientación a Objetos",
-        "institution": "Alura Latam",
-        "skills": "Spring Boot · Programación orientada a objetos (POO)",
-        "credentialLabel": "Ver credencial",
-        "credentialUrl": "https://app.aluracursos.com/certificate/3badeb64-f746-49bb-8e5e-8e1db1e3e1f9"
-      },
-      {
-        "date": "10/06/2023",
-        "title": "Java Polimorfismo: Entendiendo herencia e interfaces",
-        "institution": "Alura Latam",
-        "skills": null,
-        "credentialLabel": "Ver credencial",
-        "credentialUrl": "https://app.aluracursos.com/certificate/renymirelesd/java-parte-3-entendiendo-herencia-interfaces"
-      },
-      {
-        "date": "19/05/2023",
-        "title": "Desarrollo Personal G5 - ONE",
-        "institution": "Alura Latam",
-        "skills": "Desarrollo personal",
-        "credentialLabel": "Ver credencial",
-        "credentialUrl": "https://app.aluracursos.com/degree/certificate/b9152a7c-2472-4fd0-ab68-6c7a9eccaad7"
-      }
-    ]
-  },
-  "contactSection": {
-    "title": "Contacto",
-    "subtitle": "¿Te gustaría trabajar conmigo, tienes una propuesta o solo quieres saludar? ¡Hablemos!",
-    "form": {
-      "namePlaceholder": "Nombre",
-      "emailPlaceholder": "Correo electrónico",
-      "messagePlaceholder": "Tu mensaje",
-      "button": "Enviar mensaje"
-    },
-    "links": {
-      "email": "renymireles@outlook.com",
+  "contact": {
+    "label": "// CONTACT",
+    "title": "Hablemos",
+    "headline": "¿Tienes un proyecto en mente? Construyamos algo increíble juntos.",
+    "note": "Estoy disponible para roles fullstack, proyectos freelance y colaboraciones open source.",
+    "social": {
       "github": "GitHub",
       "linkedin": "LinkedIn",
-      "whatsapp": "+58 414 965 8113"
+      "email": "Email",
+      "whatsapp": "WhatsApp"
+    },
+    "form": {
+      "name": "Nombre",
+      "name_ph": "Tu nombre",
+      "email": "Email",
+      "email_ph": "tu@email.com",
+      "message": "Mensaje",
+      "message_ph": "Cuéntame sobre tu proyecto...",
+      "submit": "Enviar mensaje",
+      "sending": "Enviando...",
+      "success": "¡Mensaje listo! Abriendo tu cliente de correo.",
+      "error": "Ocurrió un error. Intenta de nuevo."
     }
   },
   "footer": {
-    "copyright": "© {year} Reny Mireles. Todos los derechos reservados.",
-    "links": {
-      "email": "Email",
-      "github": "GitHub",
-      "linkedin": "LinkedIn"
-    }
+    "rights": "© 2026 Reny Mireles. Todos los derechos reservados.",
+    "built": "Construido con React, TanStack & Framer Motion."
   }
 }
