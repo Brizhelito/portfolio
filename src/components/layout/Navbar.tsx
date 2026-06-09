@@ -122,7 +122,7 @@ export default function Navbar() {
             transition={{ duration: 0.2 }}
             className="lg:hidden mx-auto max-w-7xl px-5 mt-2"
           >
-            <div className="glass rounded-2xl p-3 border border-border-subtle flex flex-col">
+            <div className="glass bg-bg-base/95 backdrop-blur-xl rounded-2xl p-3 border border-border-subtle flex flex-col shadow-xl">
               {links.map((l) => (
                 <a
                   key={l.id}
